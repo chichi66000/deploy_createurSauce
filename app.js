@@ -58,7 +58,7 @@ app.use('/api/auth', userRoutes);
 
 //poitn d'entrée build de react frontend
 app.use('/', express.static(__dirname + '/build'))
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + 'build', 'index.html'))
 })
 // test 1
